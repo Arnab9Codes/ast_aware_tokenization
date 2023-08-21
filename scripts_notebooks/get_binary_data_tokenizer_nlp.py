@@ -84,11 +84,11 @@ d=CustomDatasetNonAST(tokenizer_nlp, evaluate=False)
 e=CustomDatasetNonAST(tokenizer_nlp, evaluate=True)
 
 # Save instance 'd'
-with open('../saved_data/noast_d_18k_512.pkl', 'wb') as f:
+with open('../saved_data/noast_d_18k512.pkl', 'wb') as f:
     pickle.dump(d, f)
 
 # Save instance 'e'
-with open('../saved_data/noast_e_2k_512.pkl', 'wb') as f:
+with open('../saved_data/noast_e_2k512.pkl', 'wb') as f:
     pickle.dump(e, f)
 
 
