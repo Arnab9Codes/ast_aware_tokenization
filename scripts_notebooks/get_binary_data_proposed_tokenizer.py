@@ -92,11 +92,11 @@ d=CustomDataset(custom_t, evaluate=False)
 e=CustomDataset(custom_t, evaluate=True)
 
 # Save instance 'd'
-with open('ast_d_18k_embed_512.pkl', 'wb') as f:
+with open('../saved_data/ast_d_18k_embed_512.pkl', 'wb') as f:
     pickle.dump(d, f)
 
 # Save instance 'e'
-with open('ast_e_2k_embed_512.pkl', 'wb') as f:
+with open('../saved_data/ast_e_2k_embed_512.pkl', 'wb') as f:
     pickle.dump(e, f)
 
 
