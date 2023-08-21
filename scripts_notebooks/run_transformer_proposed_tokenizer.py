@@ -68,7 +68,7 @@ fast_tokenizer.mask_token='<mask>'
 fast_tokenizer.pad_token='<pad>'
 
 # Load instance 'd'
-with open('../saved_data/ast_d_15k_embed_512.pkl', 'rb') as f:
+with open('../saved_data/ast_d_18k_embed_512.pkl', 'rb') as f:
     d_loaded = pickle.load(f)
 
 # Load instance 'e'
@@ -89,7 +89,7 @@ model = BertLMHeadModel(config)
 import torch
 
 training_args = TrainingArguments(
-    output_dir="./ast_transformer",
+    output_dir="../saved_model/ast_transformer",
     overwrite_output_dir=True,
     num_train_epochs=100,#100,
     do_train=True,
