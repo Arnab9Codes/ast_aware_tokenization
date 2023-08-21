@@ -62,12 +62,14 @@ contains the trained transformer models
 - generates the embedding for 2 kinds of transformers
 - used max_lenth = 512 for tokens
 - `compare.ipynb` contains the results
-- `all.json` is the SCD-88 python dataset
+- `all.json` is the SCD-88 python dataset, where train, test, validation combined, as we only need clones
+  to check embedding distances
 
 ## saved_data
 
--contains binary files used, can be used to quickly load into the transformer model
+-contains binary files used, can be used to quickly load into the transformer modeln(18k train, 2k eval)
 -some naming changes requied
 
 ## Pypi
 future work
+
