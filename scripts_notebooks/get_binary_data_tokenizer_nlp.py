@@ -15,10 +15,13 @@ from transformers import Trainer, TrainingArguments
 from tokenizers import ByteLevelBPETokenizer
 import pickle
 
+# in the machine there is noast_d_20k_512_w.pkl and noast_e_20k_512_w.pkl, as I tried to create another set of data
+# without any pre_tokenzier = Whitespace(), but did not run that, so do not have tokenizer_nlp without Whitespace
+# pretokenization data.
 
 tokenizer_nlp = Tokenizer(BPE(unk_token="[UNK]"))
 trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
-print('no whitespace')
+
 tokenizer_nlp.pre_tokenizer = Whitespace()
 files = ['../TXT_Files/tokens1to25k_noast.txt']
 tokenizer_nlp.train(files, trainer)
@@ -81,11 +84,11 @@ d=CustomDatasetNonAST(tokenizer_nlp, evaluate=False)
 e=CustomDatasetNonAST(tokenizer_nlp, evaluate=True)
 
 # Save instance 'd'
-with open('../saved_data/noast_d_18k_512_w.pkl', 'wb') as f:
+with open('../saved_data/noast_d_18k_512.pkl', 'wb') as f:
     pickle.dump(d, f)
 
 # Save instance 'e'
-with open('../saved_data/noast_e_2k_512_w.pkl', 'wb') as f:
+with open('../saved_data/noast_e_2k_512.pkl', 'wb') as f:
     pickle.dump(e, f)
 
 
