@@ -68,11 +68,11 @@ fast_tokenizer.mask_token='<mask>'
 fast_tokenizer.pad_token='<pad>'
 
 # Load instance 'd'
-with open('../saved_data/ast_d_18k_embed_512.pkl', 'rb') as f:
+with open('../saved_data/dataset_d_15k.pkl', 'rb') as f:
     d_loaded = pickle.load(f)
 
 # Load instance 'e'
-with open('../saved_data/ast_e_2k_embed_512.pkl', 'rb') as f:
+with open('../saved_data/dataset_e_15k.pkl', 'rb') as f:
     e_loaded = pickle.load(f)
 
 data_collator = DataCollatorForLanguageModeling(
