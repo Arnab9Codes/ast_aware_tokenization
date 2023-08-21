@@ -3,7 +3,7 @@ combines ast aware tokenization with subword tokenization(here experimented with
 
 ## Usage
 
-`astTokenizer.py` is the file that combines ast aware tokenization. Could be simply imported and used directly for python code.
+`./scripts_notebooks/astTokenizer.py` is the file that combines ast aware tokenization. Could be simply imported and used directly for python code.
 It uses `tree-sitter` to generate `ast`, then use intelligent parsing to figure out **'ast tokens'**, **'docstrings'**, **'comments'**
 Then encode them. For encoding, empty, untrained `huggingface` tokenizer object needs to be passed, that has an **augmented vocabulary**
 this allows us to use this as import and in conjuction with `hugginface transformers` library for better integration.
