@@ -61,7 +61,7 @@ contains the trained transformer models
 ## GetEmbed
 - generates the embedding for 2 kinds of transformers
 - used max_lenth = 512 for tokens
--  while encode in any huggingface tokenizer_nlp returns encodings of shape [1, hidden_size] and [batch_size, hidden_size], we only implemented single strin encode
+-  while encode in any huggingface tokenizer_nlp returns encodings of shape [1, hidden_size] and [batch_size, hidden_size], we only implemented single string encode
 - `compare.ipynb` contains the results
 - `all.json` is the SCD-88 python dataset, where train, test, validation combined, as we only need clones
   to check embedding distances
