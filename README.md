@@ -54,7 +54,7 @@ fast_tokenizer.pad_token='<pad>'
 - provide tokens parsed file for that specific programming language.
 
 ## saved Models
--contains the trained transformer models
+contains the trained transformer models
 1. ast_transformer :  contains trained model for proposed tokenizer
 2. non_ast_transformer: contains trained model for tokenizer_nlp
 
@@ -65,6 +65,7 @@ fast_tokenizer.pad_token='<pad>'
 - `all.json` is the SCD-88 python dataset
 
 ## saved_data
+
 -contains binary files used, can be used to quickly load into the transformer model
 -some naming changes requied
 
