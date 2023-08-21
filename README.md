@@ -35,12 +35,38 @@ For training purposes `CustomTokenizer` class can be directly used with `PreTrai
 fast_tokenizer = PreTrainedTokenizerFast(tokenizer_object=custom_t)
 fast_tokenizer.mask_token='<mask>'
 fast_tokenizer.pad_token='<pad>'
+
+# carry out normal transformer model training, might require some additional changes for complex cases
+
 ```
 
-## notes
+### ast aware vocabulary augmentation
+- create a file containing tokens, building a ast tokenbase to extract vocabulary from
+- `genAstSplits` from `astTokenizer` can be used to create the tokenbase (we used 25k)
+- selected 20 most frequent from 3.3 million ast tokens
+- this hugely improves the performance of the proposed tokenizer
+
+## Necessary changes for other programming languages
 - Simple parsing instructions modifications required to apply for other programming languages
 - `ast_vocabulary_building.ipynb` has generates the vocabulary that normal nlp tokenizers do not learn at all
 - `ast_vocabulary_building.ipynb` has to be modified slightly for other programming languages
-- ```
+- use tree-sitter build to generate language specific file, change the folder name for parser
+- provide tokens parsed file for that specific programming language.
 
-  ```
+## saved Models
+-contains the trained transformer models
+1. ast_transformer :  contains trained model for proposed tokenizer
+2. non_ast_transformer: contains trained model for tokenizer_nlp
+
+## GetEmbed
+- generates the embedding for 2 kinds of transformers
+- used max_lenth = 512 for tokens
+- `compare.ipynb` contains the results
+- `all.json` is the SCD-88 python dataset
+
+## saved_data
+-contains binary files used, can be used to quickly load into the transformer model
+-some naming changes requied
+
+## Pypi
+future work
