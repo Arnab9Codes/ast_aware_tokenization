@@ -67,7 +67,7 @@ with open('noast_d_18k512.pkl', 'rb') as f:
 # Load instance 'e'
 print('loading data in e')
 #with open('noast_e_2k_embed_512.pkl', 'rb') as f:
-with open('noast_e_2k512.pkl', 'rb') as f:
+with open('noast_e_20k512.pkl', 'rb') as f:
     e_loaded = pickle.load(f)
 
 data_collator = DataCollatorForLanguageModeling(
