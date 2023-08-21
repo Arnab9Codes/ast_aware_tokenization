@@ -10,6 +10,9 @@ this allows us to use this as import and in conjuction with `hugginface transfor
 
 
 ```
+from astTokenizer import CustomTokenizer
+
+
 all_tokens = list(tokenizer_nlp.get_vocab().keys()) +  list(tokenizer_ast.get_vocab().keys()) #could be done differently
 tokenizer_combined = Tokenizer(models.BPE()) # empty Tokenizer object passed
 tokenizer_combined.add_tokens(list(set(all_tokens))) 
