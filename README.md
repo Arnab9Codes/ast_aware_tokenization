@@ -75,6 +75,13 @@ contains the trained transformer models
 -contains binary files used, can be used to quickly load into the transformer modeln(18k train, 2k eval)
 -some naming changes requied
 
-## Pypi
+## Important packages
+requirements.txt
+
+[tree-sitter](https://tree-sitter.github.io/tree-sitter/using-parsers) directly used for `tree-python` and 'language.so' file
+Check their documentation.
+
+
+## pypi
 future work
 
