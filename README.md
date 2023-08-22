@@ -46,7 +46,7 @@ fast_tokenizer.pad_token='<pad>'
 ### ast aware vocabulary augmentation
 - create a file containing tokens, building a ast tokenbase to extract vocabulary from
 - `genAstSplits` from `astTokenizer` can be used to create the tokenbase (we used 25k)
-- selected 20 most frequent from 3.3 million ast tokens
+- selected 20k most frequent from 3.3 million ast tokens, can be altered
 - this hugely improves the performance of the proposed tokenizer
 
 ## Necessary changes for other programming languages
